@@ -51,11 +51,7 @@
       </main>
 
       <!-- Footer -->
-      <footer class="footer footer-center p-4 bg-base-100 border-t border-base-200">
-        <aside>
-          <p>© {{ year }} - Admin Panel</p>
-        </aside>
-      </footer>
+      <Footer />
     </div>
 
     <!-- Sidebar -->
@@ -64,12 +60,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import Sidebar from '@/components/Sidebar.vue'
-
+import { ref } from 'vue'
+import Sidebar from '../components/MainSidebar.vue'
+import Footer from '@/components/MainFooter.vue'
 const theme = ref('light')
-const year = new Date().getFullYear()
-
 const toggleTheme = () => {
   theme.value = theme.value === 'light' ? 'dark' : 'light'
 }

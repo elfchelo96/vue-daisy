@@ -4,7 +4,13 @@
 
     <aside class="w-72 bg-base-100 border-r border-base-200 min-h-full">
       <!-- Logo -->
-      <div class="p-6 text-2xl font-bold border-b border-base-200">🚀 MyAdmin</div>
+      <div class="p-6 text-2xl font-bold border-b border-base-200">
+        🚀 CPU <br />
+        <small class="font-semibold text-gray-500">
+          Certificado de <br />
+          Proveedor Unico
+        </small>
+      </div>
 
       <!-- Menu -->
       <ul class="menu p-4 gap-1">
@@ -27,3 +33,4 @@
     </aside>
   </div>
 </template>
+<script setup></script>

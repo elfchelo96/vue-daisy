@@ -1,8 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
-})
+import AdminLayout from '@/layouts/AdminLayout.vue'
 
-export default router
+import Dashboard from '@/pages/MainDashboard.vue'
+import Users from '@/pages/Security/ListUsers.vue'
+
+const routes = [
+  {
+    path: '/',
+    component: AdminLayout,
+    children: [
+      { path: '', redirect: '/dashboard' },
+      { path: 'dashboard', component: Dashboard },
+      { path: 'usuarios', component: Users },
+    ],
+  },
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes,
+})
